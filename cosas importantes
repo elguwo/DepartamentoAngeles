@@ -1,0 +1,36 @@
+/* Usa % para layouts grandes: sidebars, columnas, panels */
+/* Evita vh en móviles: la barra del navegador rompe el alto */
+
+/* 100vh SOLO para el contenedor raíz */
+.app {
+  height: 100vh; /* ok acá */
+}
+
+/* Mejor rem que px para texto (escala mejor) */
+/* px solo para bordes finos y detalles */
+.card {
+  padding: 1rem;
+  border-radius: 12px; /* px está bien */
+}
+
+/* Flex y Grid > position absolute */
+/* Absolute solo para overlays o decorativos */
+
+/* gap es mejor que margin para separar elementos */
+
+/* No animes width/height si querés fluidez */
+/* Anima opacity, transform, gap */
+
+/* backdrop-filter + blur grande = lag en móvil */
+/* Usa blur chico (10–20px máx) */
+
+/* Media queries para estructura */
+/* Clases con JS para transiciones reales */
+
+/* No dupliques layouts */
+/* Base común + diferencias por orientación */
+
+/* Usa min-width / max-width para evitar layouts rotos */
+
+/* overflow: hidden solo cuando sabés por qué */
+/* Si no, vas a perder scroll (y la paciencia) */

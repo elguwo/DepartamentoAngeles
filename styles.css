@@ -1,0 +1,149 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url(sources/karsten-winegeart-kpX0CebuIaU-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.titulo {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.Todo {
+  width: 70%;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.6fr 1.4fr;
+  gap: 2vh;
+  padding: 2vh;
+}
+.carruseldefotos {
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid rgba(255, 255, 255, 0.212);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.28),
+    inset 0 0 15px rgba(255, 255, 255, 0.187);
+  backdrop-filter: blur(20px);
+  border-radius: 3vh;
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: scale(1);
+}
+
+.carruseldefotos img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.carruseldefotos img.active {
+  opacity: 1;
+}
+.whatsapp {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  color: rgba(142, 255, 145, 0.9);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  border: 2px solid rgba(255, 255, 255, 0.178);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.28),
+    inset 0 0 15px rgba(255, 255, 255, 0.222);
+  backdrop-filter: blur(20px);
+  border-radius: 3vh;
+  padding: 2vh;
+  grid-column: 2;
+  grid-row: 1;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: scale(1);
+}
+.whatsapp h1 {
+  margin: 0;
+  font-size: 2rem;
+  background: linear-gradient(135deg, rgba(142, 255, 145, 1), rgba(142, 255, 145, 0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 15px rgba(142, 255, 145, 0.3);
+  letter-spacing: 3px;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+.whatsapp a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  padding: 0.6vh 1.2vh;
+  border-radius: 2vh;
+  background: linear-gradient(135deg, rgba(142, 255, 145, 0.2), rgba(142, 255, 145, 0.05));
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(142, 255, 145, 0.2);
+}
+.whatsapp a:hover {
+  color: rgba(142, 255, 145, 1);
+  background: linear-gradient(135deg, rgba(142, 255, 146, 0.128), rgba(142, 255, 145, 0.15));
+  box-shadow: 0 0 20px rgba(142, 255, 146, 0.158);
+  transform: translateY(-2px);
+}
+.whatsapp::before {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(142, 255, 145, 0.3);
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 0.5vh;
+}
+iframe {
+  border: 1px white;
+  border-radius: 4vh;
+  grid-column: 2;
+  grid-row: 2;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: scale(1);
+}
+.whatsapp:hover,
+.carruseldefotos:hover,
+iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(255, 254, 254, 0.28),
+    inset 0 0 15px rgba(255, 255, 255, 0.201);
+}
+.whatsapp:hover h1 {
+  transform: scale(1.05);
+}
+a {
+  text-decoration: none;
+  color: lightblue;
+}
